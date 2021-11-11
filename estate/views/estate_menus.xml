@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="real_estate_properties_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="books_action" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="estate_property_type_action" model="ir.actions.act_window">
+        <field name="name">Property Types</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="real_estate_properties_offer_action" model="ir.actions.act_window">
+        <field name="name">Offers</field>
+        <field name="res_model">estate.property.offer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+   
+ 
+  <record id="author_menu_action" model="ir.actions.act_window">
+        <field name="name">Author</field>
+        <field name="res_model">author.lib</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+     
+<menuitem sequence="0" id="menu_estate" name="Estate Demo"/>
+  <menuitem id="menu_estate_root" parent="menu_estate"  name="Library"/>
+    <menuitem id="menu_estate_root_menu1" parent="menu_estate_root"  name="Author Details" action="author_menu_action" />
+   
+
+
+</odoo>
